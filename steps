@@ -1,0 +1,58 @@
+__str__ METHOD
+Use __class__.__name__ to get the name of the class the object belongs to
+Use self.id to get the id of the object
+Use fstrings to print/return the str representation
+
+save(self) METHOD
+update the updated_at attr of the instance
+
+to_dict(self) METHOD
+Get the __dict__ of the instance and make a copy of it
+Create a new attribute for the dict representation and set it with the name of the class
+Update the values of updated_at and created_at with the iso version of the value
+return the dict
+
+file_storage/new(self, new_obj)
+we go through the attributes of the new object and set name and ID attributes
+
+file_storage/save(self)
+create an empty dict to store the dict representation of the objects using the to_dict method of our BaseModel. The we can write the dict representation to a json using json.dumps
+
+
+
+file_storage/reload(self)
+create a try catch block so that we can pass withouth raising an exception in case the file.json doesn't exist
+If the file exists we load the data from the file:
+Read the file using the open function
+Create a dict of the file using the load from the json module
+Go through the dict setting the values as needed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
